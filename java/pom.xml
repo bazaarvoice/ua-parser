@@ -17,7 +17,7 @@
     <url>https://github.com/bazaarvoice/ua-parser/</url>
 
     <scm>
-        <connection>scm:git:git@github.com:bazaarvoice/magpie-java-common.git</connection>
+        <connection>scm:git:git@github.com:bazaarvoice/ua-parser.git</connection>
     </scm>
 
     <properties>
