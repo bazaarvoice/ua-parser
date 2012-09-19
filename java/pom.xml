@@ -2,15 +2,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.bazaarvoice.commons</groupId>
-        <artifactId>bv-super-pom</artifactId>
-        <version>1.10</version>
+        <groupId>ua_parser</groupId>
+        <artifactId>ua-parser-complete</artifactId>
+        <version>1.2-SNAPSHOT</version>
     </parent>
 
     <groupId>ua_parser</groupId>
     <artifactId>ua-parser</artifactId>
     <packaging>jar</packaging>
-    <version>1.2-SNAPSHOT</version>
 
     <name>Browserscope's User-Agent Parser</name>
 

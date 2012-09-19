@@ -2,6 +2,12 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>com.bazaarvoice.commons</groupId>
+        <artifactId>bv-super-pom</artifactId>
+        <version>1.10</version>
+    </parent>
+
     <groupId>ua_parser</groupId>
     <artifactId>ua-parser-complete</artifactId>
     <packaging>pom</packaging>
