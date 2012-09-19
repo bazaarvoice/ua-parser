@@ -10,7 +10,7 @@
     <groupId>ua_parser</groupId>
     <artifactId>ua-parser</artifactId>
     <packaging>jar</packaging>
-    <version>1.2-BV</version>
+    <version>1.2-SNAPSHOT</version>
 
     <name>Browserscope's User-Agent Parser</name>
 
