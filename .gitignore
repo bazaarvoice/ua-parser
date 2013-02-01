@@ -1,7 +1,9 @@
-node_modules
+node_modules/
 .DS*
 TAGS
 dist
 cabal-dev
 target
-
+*.pyc
+build/
+py/ua_parser.egg-info/
