@@ -61,6 +61,10 @@ user_agent_parsers:
   - regex: '(Opera Mini)/att/(\d+)\.(\d+)'
   - regex: '(Opera)/9.80.*Version/(\d+)\.(\d+)(?:\.(\d+))?'
 
+  # Opera 14 for Android uses a WebKit render engine.
+  - regex: '(?:Mobile Safari).*(OPR)/(\d+)\.(\d+)\.(\d+)'
+    family_replacement: 'Opera Mobile'
+
   # Palm WebOS looks a lot like Safari.
   - regex: '(hpw|web)OS/(\d+)\.(\d+)(?:\.(\d+))?'
     family_replacement: 'webOS Browser'
@@ -164,6 +168,14 @@ user_agent_parsers:
 
   # PyAMF
   - regex: '(PyAMF)/(\d+)\.(\d+)\.(\d+)'
+
+  # Yandex Browser
+  - regex: '(YaBrowser)/(\d+)\.(\d+)\.(\d+)'
+    family_replacement: 'Yandex Browser'
+
+  # Mail.ru Amigo/Internet Browser (Chromium-based)
+  - regex: '(Chrome)/(\d+)\.(\d+)\.(\d+).* MRCHROME'
+    family_replacement: 'Mail.ru Chromium Browser'
 
   #### END SPECIAL CASES TOP ####
 
@@ -288,6 +300,8 @@ user_agent_parsers:
   - regex: '(QtCarBrowser)'
     v1_replacement: '1'
 
+  - regex: '(iBrowser/Mini)(\d+).(\d+)'
+    family_replacement: 'iBrowser Mini'
   # nokia browsers
   # based on: http://www.developer.nokia.com/Community/Wiki/User-Agent_headers_for_Nokia_devices
   - regex: '^(Nokia)'
@@ -542,6 +556,12 @@ os_parsers:
     os_replacement: 'BlackBerry OS'
 
   ##########
+  # Firefox OS
+  ##########
+  - regex: '\(Mobile;.+Firefox/\d+\.\d+'
+    os_replacement: 'Firefox OS'
+
+  ##########
   # BREW
   # yes, Brew is lower-cased for Brew MP
   ##########
@@ -559,6 +579,8 @@ os_parsers:
   # Old style
   - regex: '(GoogleTV)\/\d+'
 
+  - regex: '(WebTV)/(\d+).(\d+)'
+  
   ##########
   # Misc mobile
   ##########
@@ -918,6 +940,11 @@ device_parsers:
     device_replacement: 'Softbank $1'
   - regex: 'Softbank/2\.0/([A-Za-z0-9]+)'
     device_replacement: 'Softbank $1'
+
+  ##########
+  # WebTV
+  ##########
+  - regex: '(WebTV)/(\d+).(\d+)'
 
   ##########
   # Generic Smart Phone
