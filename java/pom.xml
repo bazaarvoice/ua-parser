@@ -4,7 +4,7 @@
     <parent>
         <groupId>ua_parser</groupId>
         <artifactId>ua-parser-complete</artifactId>
-        <version>1.2.1-BV</version>
+        <version>1.2.2-BV-SNAPSHOT</version>
     </parent>
 
     <groupId>ua_parser</groupId>
