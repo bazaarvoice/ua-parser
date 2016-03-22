@@ -5,13 +5,13 @@
     <parent>
         <groupId>com.bazaarvoice.commons</groupId>
         <artifactId>bv-super-pom</artifactId>
-        <version>1.10</version>
+        <version>1.16</version>
     </parent>
 
     <groupId>ua_parser</groupId>
     <artifactId>ua-parser-complete</artifactId>
     <packaging>pom</packaging>
-    <version>1.2.2-BV-SNAPSHOT</version>
+    <version>1.3.1-BV-SNAPSHOT</version>
 
     <scm>
         <connection>scm:git:git@github.com:bazaarvoice/ua-parser.git</connection>

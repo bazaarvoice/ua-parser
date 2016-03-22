@@ -6,10 +6,10 @@
     <title>$title$</title>
     <authors>enemaerke</authors>
     <owners>enemaerke</owners>
-    <projectUrl>http://github.com/enemaerke/uaparser</projectUrl>
+    <projectUrl>https://github.com/tobie/ua-parser</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>A .net wrapper for the uaparser library</description>
-    <copyright>Copyright 2012</copyright>
+    <description>A .net wrapper for the ua-parser library</description>
+    <copyright>Copyright 2014</copyright>
     <tags>UAParser .Net UserAgent Parsing</tags>
   </metadata>
 </package>

@@ -35,6 +35,10 @@ public class DeviceParser {
   }
 
   public Device parse(String agentString) {
+    if (agentString == null) {
+      return null;
+    }
+
     String device = null;
     for (DevicePattern p : patterns) {
       if ((device = p.match(agentString)) != null) {
@@ -46,7 +50,7 @@ public class DeviceParser {
     return new Device(device);
   }
 
-  public static DeviceParser fromList(List<Map> configList) {
+  public static DeviceParser fromList(List<Map<String,String>> configList) {
     List<DevicePattern> configPatterns = new ArrayList<DevicePattern>();
     for (Map<String,String> configMap : configList) {
       configPatterns.add(DeviceParser.patternFromMap(configMap));

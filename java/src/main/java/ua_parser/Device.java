@@ -30,7 +30,7 @@ public class Device {
     this.family = family;
   }
 
-  public static Device fromMap(Map<String, Object> m) {
+  public static Device fromMap(Map<String, String> m) {
     return new Device((String) m.get("family"));
   }
 
@@ -50,7 +50,7 @@ public class Device {
 
   @Override
   public String toString() {
-    return String.format("{family: %s}",
-                         family == null ? null : '"' + family + '"');
+    return String.format("{\"family\": %s}",
+                         family == null ? Constants.EMPTY_STRING : '"' + family + '"');
   }
 }

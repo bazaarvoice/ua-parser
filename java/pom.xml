@@ -4,7 +4,7 @@
     <parent>
         <groupId>ua_parser</groupId>
         <artifactId>ua-parser-complete</artifactId>
-        <version>1.2.2-BV-SNAPSHOT</version>
+        <version>1.3.1-BV-SNAPSHOT</version>
     </parent>
 
     <groupId>ua_parser</groupId>
@@ -62,6 +62,11 @@
             <version>1.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+        <groupId>commons-collections</groupId>
+        <artifactId>commons-collections</artifactId>
+        <version>3.2.1</version>
+      </dependency>
     </dependencies>
 
 </project>
