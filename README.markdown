@@ -1,27 +1,21 @@
-# ua-parser has moved
+**Caution**: This project is a fork of the User Agent String Parser, which is currently found on GitHub at
+https://github.com/ua-parser. The Java implementation is located at https://github.com/ua-parser/uap-java.
 
-This project has moved to a new project space [ua-parser](https://github.com/ua-parser), separating the regexes from the parsers for the different languages into their own repos:
+## Why is there a fork?
 
-* [uap-core](https://github.com/ua-parser/uap-core) : The regex file necessary to build language ports of Browserscope's user agent parser.
-* [uap-cpp](https://github.com/ua-parser/uap-cpp) : C++ implementation of ua-parser
-* [uap-csharp](https://github.com/ua-parser/uap-csharp) : C# implementation of ua-parser
-* [uap-d](https://github.com/ua-parser/uap-d) : D implementation of ua-parser
-* [uap-go](https://github.com/ua-parser/uap-go) : Go implementation of ua-parser
-* [uap-haskell](https://github.com/ua-parser/uap-haskell) : Haskell implementation of ua-parser
-* [uap-java](https://github.com/ua-parser/uap-java) : Java implementation of ua-parser
-* [uap-perl](https://github.com/ua-parser/uap-perl) : Perl implementation of ua-parser
-* [uap-php](https://github.com/ua-parser/uap-php) : PHP implementation of ua-parser
-* [uap-pig](https://github.com/ua-parser/uap-pig) : Pig implementation of ua-parser
-* [uap-python](https://github.com/ua-parser/uap-python) : Python implementation of ua-parser
-* [uap-r](https://github.com/ua-parser/uap-r) : R implementation of ua-parser
-* [uap-ruby](https://github.com/ua-parser/uap-ruby) : A simple, comprehensive Ruby gem for parsing user agent strings with the help of BrowserScope's UA database
-* [uap-ref-impl](https://github.com/ua-parser/uap-ref-impl) : JavaScript reference implementation of ua-parser.
+Unfortunately, the upstream project does not appear to publish artifacts to Maven Central, and releases are quite infrequent. This fact necessitated the creation of a fork, as we needed the ability to publish an artifact within our Sonatype Nexus repository. In addition, the upstream version contains a security vulnerability that is mitigated within our fork.
 
-**Please contribute to the respective repositories! Thanks.**
+## What is different?
+
+* The project has been modified to use the BV Super POM.
+* The linked version of Apache Commons has been upgraded to mitigate a security vulnerability.
+* The project structure differs from that of the upstream project, which has moved to a different repository since the original fork appeared.
+* This version has been patched to include the changes made between upstream 1.2.0 and 1.3.1, while still preserving the old directory structure.
+* This version includes the newest (as of 1.3.1) regex patterns and tests, which include detection support for browsers like Microsoft Edge.
 
 ----
 
-ua-parser [![Build Status](https://secure.travis-ci.org/tobie/ua-parser.png?branch=master)](https://travis-ci.org/tobie/ua-parser)
+ua-parser
 =========
 
 `ua-parser` is a multi-language port of [BrowserScope][2]'s [user agent string parser][3].
