@@ -11,11 +11,12 @@
     <groupId>ua_parser</groupId>
     <artifactId>ua-parser-complete</artifactId>
     <packaging>pom</packaging>
-    <version>1.3.1-BV-SNAPSHOT</version>
+    <version>1.3.1-BV</version>
 
     <scm>
         <connection>scm:git:git@github.com:bazaarvoice/ua-parser.git</connection>
-    </scm>
+      <tag>ua-parser-complete-1.3.1-BV</tag>
+  </scm>
 
     <modules>
         <module>java</module>
