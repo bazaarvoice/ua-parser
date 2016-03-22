@@ -1,5 +1,12 @@
 test_cases:
 
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Android Donut; de-de; HTC Tattoo 1.52.161.1 Build/Donut) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1'
+    family: 'Android'
+    major: '1'
+    minor: '2'
+    patch:
+    patch_minor:
+
   - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Nexus One Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17,gzip(gfe),gzip(gfe)'
     family: 'Android'
     major: '2'
@@ -49,6 +56,13 @@ test_cases:
     patch:
     patch_minor:
 
+  - user_agent_string: 'Mozilla/5.0 (X11; U: Linux i686; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.127 Large Screen Safari/533.4 GoogleTV/b39389'
+    family: 'GoogleTV'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
   - user_agent_string: 'Mozilla/5.0 (Linux; GoogleTV 4.0.4; LG Google TV Build/000000) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.77 Safari/534.24'
     family: 'GoogleTV'
     major: '4'
@@ -79,10 +93,10 @@ test_cases:
 
   - user_agent_string: 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.2) Gecko/20090807 Mandriva Linux/1.9.1.2-1.1mud2009.1 (2009.1) Firefox/3.5.2 FirePHP/0.3,gzip(gfe),gzip(gfe)'
     family: 'Mandriva'
-    major: '1'
-    minor: '9'
-    patch: '1'
-    patch_minor: '2'
+    major: '2009'
+    minor: '1'
+    patch:
+    patch_minor:
 
   - user_agent_string: ''
     family: 'Other'

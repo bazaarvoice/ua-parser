@@ -1,18 +1,27 @@
+use HTTP::UA::Parser;
 use strict;
+use Test::More;
 use FindBin qw($Bin);
-use Test::More 'no_plan';
 
-BEGIN { use_ok('HTTP::UA::Parser') };
+my $source = 'test_device.yaml';
 
-my $yaml = YAML::Tiny->read( $Bin.'/test_resources/test_device.yaml' )->[0]->{test_cases};
-my $r = HTTP::UA::Parser->new();
+eval {
+    require($Bin . '/utils.pl');
+    my $yaml = get_test_yaml($source);
+    my $r = HTTP::UA::Parser->new();
+    foreach my $st (@{$yaml}){
+        $r->parse($st->{user_agent_string});
+        my $os = $r->device;
+        is ($os->family, $st->{family});
+    }
+};
 
-foreach my $st (@{$yaml}){
-    $r->parse($st->{user_agent_string});
-    my $family = $st->{family};
-    is  ($r->device->family, $family, 'device test '.$family);
+if ($@){
+    diag $@;
+    plan skip_all => 'Couldn\'t fetch tests file ' . $source;
 }
 
+done_testing();
 
-__END__
 
+1;
